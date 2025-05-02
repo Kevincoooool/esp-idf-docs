@@ -15,7 +15,9 @@ ESP32系列是乐鑫（Espressif）推出的一系列低功耗、高性能的物
 ### 基础入门
 - [开发环境搭建](./docs/搭建编译环境.md) - Windows下ESP-IDF 5.3.3环境搭建指南
 - [分区表配置](./docs/partition.md) - ESP32 Flash分区表配置教程
-
+- [Kconfig文件介绍](./docs/kconfig文件介绍.md) - ESP-IDF Kconfig配置系统详解
+- [Menuconfig配置](./docs/menuconfig文件介绍.md) - ESP-IDF Menuconfig配置工具使用指南
+- [创建组件](./docs/创建组件.md) - ESP-IDF自定义组件开发完全指南
 ### 开发板介绍
 - [ESP32S3 Korvo 2 V3开发板](./docs/Korvo开发板介绍.md) - 酷世DIY ESP32S3 Korvo 2 V3开发板详细介绍
 - [ESP32S3 SP V4开发板](./docs/ESP32S3%20SP%20V4开发板介绍.md) - 酷世DIY ESP32S3 SP V4核心板开发板详细介绍
