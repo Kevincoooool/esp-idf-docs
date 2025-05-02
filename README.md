@@ -53,7 +53,7 @@ ESP32系列是乐鑫（Espressif）推出的一系列低功耗、高性能的物
 
 ## 开发板特点
 
-### [ESP32S3 Korvo 2 V3开发板](https://item.taobao.com/item.htm?id=850935502337)
+### [ESP32S3 Korvo 2 V3开发板](https://item.taobao.com/item.htm?id=681702043224)
 - 采用ESP32S3 WROOM-1 N16R8官方模组(最高配置)
 - 1.69寸彩屏显示
 - 电容触摸功能
