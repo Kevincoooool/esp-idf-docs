@@ -8,45 +8,48 @@
 
 欢迎使用酷世DIY ESP-IDF 开发教程！本教程集合了ESP32系列芯片的各种开发指南，从基础环境搭建到各种外设驱动和应用实现，为您提供全面的ESP32开发学习资源。
 
-ESP32系列是乐鑫（Espressif）推出的一系列低功耗、高性能的物联网芯片，集成了Wi-Fi和蓝牙功能，广泛应用于智能家居、工业控制、可穿戴设备等领域。本教程主要基于ESP32-S3芯片，并提供了酷世DIY开发板的详细使用说明。
+ESP32系列是乐鑫（Espressif）推出的一系列低功耗、高性能的物联网芯片，集成了Wi-Fi和蓝牙功能，广泛应用于智能家居、工业控制、可穿戴设备等领域。本教程主要基于ESP32-S3芯片，并提供了淘宝酷世DIY开发板的详细使用说明。
 
 ## 目录
 
 ### 基础入门
-- [开发环境搭建](./搭建编译环境.md) - Windows下ESP-IDF 5.3.3环境搭建指南
-- [分区表配置](./partition.md) - ESP32 Flash分区表配置教程
+- [开发环境搭建](./docs/搭建编译环境.md) - Windows下ESP-IDF 5.3.3环境搭建指南
+- [分区表配置](./docs/partition.md) - ESP32 Flash分区表配置教程
 
 ### 开发板介绍
-- [ESP32S3 Korvo 2 V3开发板](./Korvo开发板介绍.md) - 酷世DIY ESP32S3 Korvo 2 V3开发板详细介绍
-- [ESP32S3 SP V4开发板](./ESP32S3%20SP%20V4开发板介绍.md) - 酷世DIY ESP32S3 SP V4核心板开发板详细介绍
+- [ESP32S3 Korvo 2 V3开发板](./docs/Korvo开发板介绍.md) - 酷世DIY ESP32S3 Korvo 2 V3开发板详细介绍
+- [ESP32S3 SP V4开发板](./docs/ESP32S3%20SP%20V4开发板介绍.md) - 酷世DIY ESP32S3 SP V4核心板开发板详细介绍
 
 ### 基础外设
-- [GPIO使用教程](./gpio.md) - ESP-IDF GPIO配置与使用
-- [ADC使用教程](./adc.md) - ESP-IDF ADC模数转换器使用指南
-- [UART串口通信](./uart.md) - ESP-IDF UART串口通信实现
-- [I2C通信教程](./iic.md) - ESP-IDF I2C总线通信实现
-- [SPI通信教程](./spi.md) - ESP-IDF SPI总线通信实现
-- [按键使用教程](./button.md) - ESP-IDF按键检测与处理
+- [GPIO使用教程](./docs/gpio.md) - ESP-IDF GPIO配置与使用
+- [ADC使用教程](./docs/adc.md) - ESP-IDF ADC模数转换器使用指南
+- [UART串口通信](./docs/uart.md) - ESP-IDF UART串口通信实现
+- [I2C通信教程](./docs/iic.md) - ESP-IDF I2C总线通信实现
+- [SPI通信教程](./docs/spi.md) - ESP-IDF SPI总线通信实现
+- [按键使用教程](./docs/button.md) - ESP-IDF按键检测与处理
 
 ### 存储应用
-- [NVS存储教程](./nvs.md) - ESP-IDF非易失性存储(NVS)使用指南
-- [SPIFFS文件系统](./spiffs.md) - ESP-IDF SPIFFS文件系统使用教程
-- [TF卡(SD卡)使用](./tfcard.md) - ESP32-S3 TF卡读写实现
+- [NVS存储教程](./docs/nvs.md) - ESP-IDF非易失性存储(NVS)使用指南
+- [SPIFFS文件系统](./docs/spiffs.md) - ESP-IDF SPIFFS文件系统使用教程
+- [TF卡(SD卡)使用](./docs/tfcard.md) - ESP32-S3 TF卡读写实现
 
 ### 网络通信
-- [WiFi使用教程](./wifi.md) - ESP-IDF WiFi功能配置与使用
-- [配网教程](./配网.md) - ESP32设备配网方案(SmartConfig/AirKiss/SoftAP/蓝牙/二维码)
-- [HTTP客户端](./http.md) - ESP-IDF HTTP客户端实现
-- [MQTT客户端](./mqtt.md) - ESP-IDF MQTT通信实现
+- [WiFi使用教程](./docs/wifi.md) - ESP-IDF WiFi功能配置与使用
+- [配网教程](./docs/配网.md) - ESP32设备配网方案(SmartConfig/AirKiss/SoftAP/蓝牙/二维码)
+- [HTTP客户端](./docs/http.md) - ESP-IDF HTTP客户端实现
+- [MQTT客户端](./docs/mqtt.md) - ESP-IDF MQTT通信实现
 
 ### 多媒体应用
-- [音频开发教程](./audio.md) - ESP-IDF I2S音频开发指南
-- [摄像头驱动](./camera.md) - ESP32-S3驱动OV2640摄像头教程
-- [触摸屏驱动](./cst816.md) - ESP32-S3 I2C驱动CST816触摸屏教程
+- [音频开发教程](./docs/audio.md) - ESP-IDF I2S音频开发指南
+- [摄像头驱动](./docs/camera.md) - ESP32-S3驱动OV2640摄像头教程
+- [网页图传](./docs/网页图传.md) - ESP32-S3驱动OV2640摄像头通过网页显示画面
+- [LCD屏显示摄像头画面](./docs/LCD显示摄像头结合lvgl.md) - ESP32-S3驱动OV2640摄像头通过屏幕显示画面
+- [触摸屏驱动](./docs/cst816.md) - ESP32-S3 I2C驱动CST816触摸屏教程
+- [LVGL MP3播放器](./docs/lvgl实现mp3播放器.md) - ESP-IDF LVGL MP3播放器实现
 
 ### 扩展功能
-- [TCA9554 I/O扩展器](./tca9554.md) - TCA9554 I/O扩展器使用教程
-- [USB功能实现](./usb.md) - ESP32 USB功能实现教程
+- [TCA9554 I/O扩展器](./docs/tca9554.md) - TCA9554 I/O扩展器使用教程
+- [USB功能实现](./docs/usb.md) - ESP32 USB功能实现教程
 
 ## 开发板特点
 
@@ -71,19 +74,19 @@ ESP32系列是乐鑫（Espressif）推出的一系列低功耗、高性能的物
 ## 学习路线建议
 
 1. **初学者**：
-   - 首先学习[开发环境搭建](./搭建编译环境.md)
-   - 了解[开发板硬件](./Korvo开发板介绍.md)或[ESP32S3 SP V4开发板](./ESP32S3%20SP%20V4开发板介绍.md)
-   - 学习基础外设：[GPIO](./gpio.md)、[按键](./button.md)
-   - 尝试简单的网络应用：[WiFi](./wifi.md)、[配网](./配网.md)
+   - 首先学习[开发环境搭建](./docs/搭建编译环境.md)
+   - 了解[开发板硬件](./docs/Korvo开发板介绍.md)或[ESP32S3 SP V4开发板](./docs/ESP32S3%20SP%20V4开发板介绍.md)
+   - 学习基础外设：[GPIO](./docs/gpio.md)、[按键](./docs/button.md)
+   - 尝试简单的网络应用：[WiFi](./docs/wifi.md)、[配网](./docs/配网.md)
 
 2. **进阶学习**：
-   - 学习更多外设：[ADC](./adc.md)、[I2C](./iic.md)、[SPI](./spi.md)、[UART](./uart.md)
-   - 掌握存储应用：[NVS](./nvs.md)、[SPIFFS](./spiffs.md)、[TF卡](./tfcard.md)
-   - 深入网络通信：[HTTP](./http.md)、[MQTT](./mqtt.md)
+   - 学习更多外设：[ADC](./docs/adc.md)、[I2C](./docs/iic.md)、[SPI](./docs/spi.md)、[UART](./docs/uart.md)
+   - 掌握存储应用：[NVS](./docs/nvs.md)、[SPIFFS](./docs/spiffs.md)、[TF卡](./docs/tfcard.md)
+   - 深入网络通信：[HTTP](./docs/http.md)、[MQTT](./docs/mqtt.md)
 
 3. **高级应用**：
-   - 多媒体开发：[音频](./audio.md)、[摄像头](./camera.md)、[触摸屏](./cst816.md)
-   - 扩展功能：[I/O扩展](./tca9554.md)、[USB功能](./usb.md)
+   - 多媒体开发：[音频](./docs/audio.md)、[摄像头](./docs/camera.md)、[触摸屏](./docs/cst816.md)
+   - 扩展功能：[I/O扩展](./docs/tca9554.md)、[USB功能](./docs/usb.md)
 
 ## 注意事项
 
