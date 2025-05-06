@@ -20,6 +20,7 @@ GPIO（通用输入/输出端口）是 ESP32 系列芯片最基础也是最常�
 ESP32 系列芯片拥有丰富的 GPIO 资源，但需要注意的是，不同型号的 ESP32 芯片 GPIO 数量和分布可能有所不同。例如：
 - ESP32：拥有 34 个 GPIO 引脚（GPIO0 ~ GPIO39）
 - ESP32-S2：拥有 43 个 GPIO 引脚（GPIO0 ~ GPIO46）
+- ESP32-S3：拥有 43 个 GPIO 引脚（GPIO0 ~ GPIO46）
 - ESP32-C3：拥有 22 个 GPIO 引脚（GPIO0 ~ GPIO21）
 
 ## GPIO 基础概念
