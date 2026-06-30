@@ -1,212 +1,110 @@
+# 酷世DIY · ESP-IDF 开发教程
 
+> **文档总索引（含视频教程片单）** → [文档总目录与视频教程大纲](./docs/文档总目录与视频教程大纲.md)  
+> 本页为观众入口；录制视频请以上述总目录的 **系列 A～P** 为准。
 
-          
-# ESP-IDF 开发教程
+---
 
 ## 简介
 
-欢迎使用酷世DIY ESP-IDF 开发教程！本教程集合 ESP32 系列芯片的开发指南，从环境搭建到外设驱动、多媒体与物联网应用，并提供**两款开发板**的完整例程学习路线。
+ESP32 系列中文教程：从环境搭建、框架理解，到外设 / 联网 / 多媒体，以及 **Korvo S3**、**P4C5** 两块开发板的完整例程讲解。文档可按章节直接转为视频课。
 
-- **ESP32-S3 Korvo 2 V3**：平替乐鑫官方 Korvo 板，SPI 屏 + DVP 摄像头 + 双麦音频，60+ 例程
-- **ESP32P4-C5 4.3寸触摸屏**：双芯架构（P4 主控 + C5 Wi-Fi），MIPI 大屏，108 例程
+| 开发板 | 例程规模 | 淘宝 |
+|--------|----------|------|
+| **ESP32-S3 Korvo 2 V3** | 60+ | [681702043224](https://item.taobao.com/item.htm?id=681702043224) |
+| **ESP32P4-C5 4.3寸触摸屏** | 108 | [667230365314](https://item.taobao.com/item.htm?id=667230365314) |
 
-推荐开发环境：**ESP-IDF v5.5.x**（Korvo / P4C5 例程默认适配；旧教程中 5.3.x 内容仍可参考）
-
-### 文档命名规范（`docs/`）
-
-| 前缀 / 格式 | 含义 | 示例 |
-|-------------|------|------|
-| `通用-` | ESP-IDF **通用 API**，不绑定单一板子 | `通用-gpio.md`、`通用-wifi.md` |
-| `Korvo例程详解-` | Korvo 仓库 **可烧录例程** 分步教程 | `Korvo例程详解-ota.md` |
-| `P4C5例程详解-` | P4C5 仓库 **可烧录例程** 分步教程 | `P4C5例程详解-ota.md` |
-| `*开发板介绍` / `*学习指南` | 板级说明与学习路线 | `Korvo开发板介绍.md` |
-
-**学习顺序**：`通用-搭建编译环境` → **`通用-ESP-IDF框架构成`**（框架全景）→ **`通用-ESP-IDF工程结构`**（单工程文件）→ 板子 `*学习指南` → `*例程详解-*`。
-
-### 如何获取例程资料
-
-本教程文档**免费开放**；**完整例程源码不提供公开下载**（无 GitHub / 公开网盘）。
-
-1. 在淘宝网进入店铺 **「酷世DIY」**，拍下对应开发板  
-2. **下单后联系客服**，说明需要例程资料  
-3. 客服通过 **百度网盘** 私信发送全套例程压缩包  
-4. 下载解压到**不含中文的路径**（如 `D:\Firmware\`），再按文档 `cd` 进工程目录编译烧录  
-
-| 开发板 | 淘宝链接 | 解压后例程根目录 |
-|--------|----------|------------------|
-| ESP32-S3 Korvo 2 V3 | [item.taobao.com/681702043224](https://item.taobao.com/item.htm?id=681702043224) | `Korvo_Firmware/` |
-| ESP32P4-C5 4.3寸触摸屏 | [item.taobao.com/667230365314](https://item.taobao.com/item.htm?id=667230365314) | `P4_C5_4.3_Firmware/` |
+- 推荐 **ESP-IDF v5.5.x**（P4C5 建议 5.5.3）
+- **文档公开**；**完整例程**淘宝拍下后联系客服，**百度网盘**发放（`Korvo_Firmware/` 或 `P4_C5_4.3_Firmware/`）
+- 工程路径**不要含中文**
 
 ---
 
-## 开发板快速入口
+## 三步开始
 
-### ESP32-S3 Korvo 2 V3
+| 步骤 | 做什么 | 文档 |
+|------|--------|------|
+| 1 | 装 IDF、理解框架与工程目录 | [搭建环境](./docs/通用-搭建编译环境.md) → [框架构成](./docs/通用-ESP-IDF框架构成.md) → [工程结构](./docs/通用-ESP-IDF工程结构.md) |
+| 2 | 拿例程、第一次烧录 | [例程开发流程](./docs/例程开发流程与公共组件.md) |
+| 3 | 选你的板子跟路线走 | [Korvo 学习指南](./docs/Korvo例程学习指南.md) 或 [P4C5 学习指南](./docs/P4C5例程学习指南.md) |
 
-| 文档 | 说明 |
-|------|------|
-| [Korvo开发板介绍](./docs/Korvo开发板介绍.md) | 硬件参数、引脚、接口 |
-| [Korvo例程学习指南](./docs/Korvo例程学习指南.md) | **完整学习路线**、30 天计划、FAQ |
-| [淘宝购买 · 联系客服发百度网盘例程](https://item.taobao.com/item.htm?id=681702043224) | 解压得 `Korvo_Firmware/` |
-
-### ESP32P4-C5 4.3寸触摸屏
-
-| 文档 | 说明 |
-|------|------|
-| [ESP32P4-C5开发板介绍](./docs/ESP32P4-C5开发板介绍.md) | 双芯架构、硬件参数 |
-| [P4C5例程学习指南](./docs/P4C5例程学习指南.md) | **完整学习路线**、验板、多媒体 |
-| [P4C5在线组件使用说明](./docs/P4C5在线组件使用说明.md) | 组件注册库引用方法 |
-| [淘宝购买 · 联系客服发百度网盘例程](https://item.taobao.com/item.htm?id=667230365314) | 解压得 `P4_C5_4.3_Firmware/` |
-
-### ESP32-S3 SP V4 核心板
-
-| 文档 | 说明 |
-|------|------|
-| [ESP32S3 SP V4开发板介绍](./docs/ESP32S3-SP-V4开发板介绍.md) | 硬件与小智 AI 例程 |
-
-### 通用
-
-| 文档 | 说明 |
-|------|------|
-| [例程开发流程与公共组件](./docs/例程开发流程与公共组件.md) | 编译烧录、BSP、Board Manager |
-| [ESP-IDF 框架整体构成](./docs/通用-ESP-IDF框架构成.md) | IDF 安装目录、components、软件分层 |
-| [ESP-IDF 工程结构（对比 Keil）](./docs/通用-ESP-IDF工程结构.md) | 单工程 CMakeLists、sdkconfig 等 |
-| [Korvo与P4C5例程对照表](./docs/Korvo与P4C5例程对照表.md) | 两款板同名例程对照与迁移 |
-| [搭建编译环境](./docs/通用-搭建编译环境.md) | Windows 下 ESP-IDF 安装 |
-
-### 热门例程详解
-
-按开发板分开写，**不要跨板烧录**。索引：[热门例程详解.md](./docs/热门例程详解.md)
-
-- **Korvo**：`docs/Korvo例程详解-*.md`（如 wifi_station、spi_lcd_touch、camera_webserver、blufi…）
-- **P4C5**：`docs/P4C5例程详解-*.md`（如 mipi_lcd_touch、p4c5_board_test、xiaozhi、esp-album…）
-- **对照**： [Korvo与P4C5例程对照表](./docs/Korvo与P4C5例程对照表.md)（查类似功能在哪，不是逐句对比教程）
-
-### P4C5 专题（仅 P4 仓库）
-
-| 文档 | 说明 |
-|------|------|
-| [P4C5专项测试例程](./docs/P4C5专项测试例程.md) | `05.test.*` 25 项硬件/AI 测试 |
-| [P4C5-GMF多媒体例程](./docs/P4C5-GMF多媒体例程.md) | `06.gmf_examples` 官方媒体管道 |
+完整片单与集号：[**文档总目录与视频教程大纲**](./docs/文档总目录与视频教程大纲.md)
 
 ---
 
-## 目录
+## 文档命名规范
 
-### 基础入门
-- [开发环境搭建](./docs/通用-搭建编译环境.md) - Windows 下 ESP-IDF 环境搭建
-- [ESP-IDF 框架整体构成](./docs/通用-ESP-IDF框架构成.md) - IDF 是什么、components、分层、构建流程
-- [ESP-IDF 工程结构（对比 Keil）](./docs/通用-ESP-IDF工程结构.md) - 单个工程里 CMakeLists、sdkconfig 等
-- [例程开发流程与公共组件](./docs/例程开发流程与公共组件.md) - 两款开发板通用开发流程
-- [分区表配置](./docs/通用-partition.md) - Flash 分区表
-- [Kconfig文件介绍](./docs/通用-kconfig.md) - Kconfig 配置系统
-- [Menuconfig配置](./docs/通用-menuconfig.md) - menuconfig 使用
-- [创建组件](./docs/通用-创建组件.md) - 自定义组件开发
-
-### 基础外设
-- [GPIO使用教程](./docs/通用-gpio.md)
-- [ADC使用教程](./docs/通用-adc.md)
-- [UART串口通信](./docs/通用-uart.md)
-- [I2C通信教程](./docs/通用-i2c.md)
-- [SPI通信教程](./docs/通用-spi.md)
-- [按键使用教程](./docs/通用-button.md)
-
-### 存储应用
-- [NVS存储教程](./docs/通用-nvs.md)
-- [SPIFFS文件系统](./docs/通用-spiffs.md)
-- [TF卡(SD卡)使用](./docs/通用-tfcard.md)
-
-### 网络通信
-- [WiFi使用教程](./docs/通用-wifi.md)
-- [配网教程](./docs/通用-配网.md)
-- [HTTP客户端](./docs/通用-http.md)
-- [MQTT客户端](./docs/通用-mqtt.md)
-
-### 多媒体应用
-- [音频开发教程](./docs/通用-audio.md)
-- [录音播放](./docs/通用-录音播放.md)
-- [摄像头驱动](./docs/通用-camera.md)
-- [网页图传](./docs/通用-网页图传.md)
-- [摄像头 LVGL 显示](./docs/通用-摄像头LVGL显示.md)
-- [触摸屏驱动](./docs/通用-cst816.md)
-- [LVGL V9](./docs/通用-lvgl-v9.md)
-- [LVGL MP3 播放](./docs/通用-lvgl-mp3播放.md)
-- [AVI 视频播放](./docs/通用-avi播放.md)
-- [JPG下载显示](./docs/通用-jpg下载显示.md)
-- [二维码识别](./docs/通用-二维码识别.md)
-
-### 扩展功能
-- [TCA9554 I/O扩展器](./docs/通用-tca9554.md)
-- [USB功能实现](./docs/通用-usb.md)
-- [综合硬件测试](./docs/通用-综合硬件测试.md)
-
-### 例程专题（Korvo / P4C5）
-- [Korvo与P4C5例程对照表](./docs/Korvo与P4C5例程对照表.md)
-- [热门例程详解索引](./docs/热门例程详解.md) — Korvo / P4 **分篇**教程（`Korvo例程详解-*`、`P4C5例程详解-*`）
-- [P4C5专项测试例程](./docs/P4C5专项测试例程.md)（05.test.*）
-- [P4C5-GMF多媒体例程](./docs/P4C5-GMF多媒体例程.md)（06.gmf_examples）
+| 前缀 | 含义 |
+|------|------|
+| `通用-` | ESP-IDF API / 概念（不绑板） |
+| `Korvo例程详解-` | Korvo 可烧录例程分步教程 |
+| `P4C5例程详解-` | P4C5 可烧录例程分步教程 |
+| `*学习指南` / `*开发板介绍` | 板级路线与硬件 |
 
 ---
 
-## 学习路线建议
+## 快速入口
 
-### Korvo S3 路线
+### Korvo S3
 
-1. [搭建编译环境](./docs/通用-搭建编译环境.md) → [Korvo例程学习指南](./docs/Korvo例程学习指南.md) 第 0～1 阶段
-2. 跑通 `korvo_board_test` 或 `hello_world`，学习 [GPIO](./docs/通用-gpio.md)、[按键](./docs/通用-button.md)
-3. 按指南阶段 2～4 学习外设与联网；阶段 5～8 学 LVGL、音频、USB、摄像头
-4. 阶段 9～10：BSP / Board Manager → 综合项目
+[Korvo开发板介绍](./docs/Korvo开发板介绍.md) · [Korvo例程学习指南](./docs/Korvo例程学习指南.md) · [热门例程详解 · Korvo](./docs/热门例程详解.md#korvo-s3-例程详解)
 
-### P4C5 路线
+### P4C5
 
-1. [搭建编译环境](./docs/通用-搭建编译环境.md) → [P4C5例程学习指南](./docs/P4C5例程学习指南.md) 验板
-2. 理解双芯 Wi-Fi 架构，从 `01.basic.*` 到 `02.beginner.mipi_lcd_touch`
-3. 联网、USB、多媒体（AVI/MP3/摄像头）按指南阶段 3～5 推进
-4. 用 [在线组件](./docs/P4C5在线组件使用说明.md) 搭建自己的工程
+[ESP32P4-C5开发板介绍](./docs/ESP32P4-C5开发板介绍.md) · [P4C5例程学习指南](./docs/P4C5例程学习指南.md) · [P4C5在线组件](./docs/P4C5在线组件使用说明.md) · [热门例程详解 · P4C5](./docs/热门例程详解.md#p4c5-例程详解)
 
-### 通用 API 与例程的关系
+### 其他
 
-`docs/通用-*.md` 讲解 **ESP-IDF 通用 API**；`*例程详解-*.md` 提供 **板级 BSP + 可运行工程**。建议：先读通用教程理解概念，再打开对应板子的例程详解动手烧录。
+[ESP32S3-SP-V4开发板介绍](./docs/ESP32S3-SP-V4开发板介绍.md) · [Korvo与P4C5例程对照表](./docs/Korvo与P4C5例程对照表.md)
+
+### P4 专题
+
+[P4C5专项测试 05.test](./docs/P4C5专项测试例程.md) · [P4C5-GMF 多媒体](./docs/P4C5-GMF多媒体例程.md)
 
 ---
 
-## 开发板特点
+## 文档分类目录
 
-### [ESP32S3 Korvo 2 V3](https://item.taobao.com/item.htm?id=681702043224)
-- ESP32-S3 WROOM-1 N16R8（16MB Flash + 8MB PSRAM）
-- 1.69 寸 ST7789 SPI 屏 + CST816 触摸
-- ES8311 + ES7210 音频、双麦、3W 喇叭
-- DVP 摄像头座、TF 卡、双 USB
-- 60+ 分级例程，兼容官方 Korvo 2 V3
+### 入门与构建
 
-### [ESP32P4-C5 4.3寸触摸屏](https://item.taobao.com/item.htm?id=667230365314)
-- ESP32-P4 + ESP32-C5 双芯（Wi-Fi 6 / BLE）
-- 4.3 寸 MIPI DSI 480×800 + ST7123 触摸
-- 16MB Flash + 32MB PSRAM，AXP2101 电源管理
-- MIPI CSI + USB UVC 双路相机，108 分级例程
-- 核心驱动已上架乐鑫组件注册库
+- [搭建编译环境](./docs/通用-搭建编译环境.md)
+- [ESP-IDF 框架整体构成](./docs/通用-ESP-IDF框架构成.md)
+- [ESP-IDF 工程结构（对比 Keil）](./docs/通用-ESP-IDF工程结构.md)
+- [例程开发流程与公共组件](./docs/例程开发流程与公共组件.md)
+- [Kconfig](./docs/通用-kconfig.md) · [menuconfig](./docs/通用-menuconfig.md)
+- [分区表](./docs/通用-partition.md) · [创建组件](./docs/通用-创建组件.md)
 
-### [ESP32S3 SP V4核心板](https://item.taobao.com/item.htm?id=850935502337)
-- ESP32-S3 N16R8 + 1.69 寸触摸屏
-- ES8311 音频、WS2812、TF 卡
-- 支持小智 AI 等应用
+### 外设 · 存储 · 网络 · 多媒体 · 扩展
+
+详见 [文档总目录 · 第十一节](./docs/文档总目录与视频教程大纲.md#十一全部文档文件清单按文件夹排序)（含全部 `通用-*` 链接）。
+
+### 例程实战
+
+- [热门例程详解索引](./docs/热门例程详解.md)（Korvo / P4 分表，对接视频系列 K / P）
+
+---
+
+## 学习路线（摘要）
+
+**Korvo**：环境 A 系列 → K00 验板 → B/C/D API 按需 → `Korvo例程详解-*` 逐个烧录  
+
+**P4C5**：环境 A 系列 → P00 验板 → 理解 C5 Wi-Fi → `P4C5例程详解-*` → 在线组件自建工程  
+
+细节与集号：[文档总目录与视频教程大纲](./docs/文档总目录与视频教程大纲.md)
 
 ---
 
 ## 注意事项
 
-1. Korvo / P4C5 例程推荐 **ESP-IDF 5.5.x**；通用教程部分基于 5.3.x，API 大体兼容
-2. 工程路径**不要含中文**；换目录或 IDF 版本时删除 `build/` 再编
-3. 首次编译需联网下载 `managed_components/`
-4. 硬件连接注意电平与电流，避免损坏开发板
+1. Korvo / P4 **例程 bin 不可互烧**；`idf.py set-target` 与板子一致  
+2. 换工程必须 `cd` 到新目录；大改配置可删 `build/`  
+3. 首次编译需联网（`managed_components`）  
+4. P4C5 Wi-Fi 需等 C5 就绪（约 10～20 s）
 
 ---
 
-## 贡献与反馈
+## 联系
 
-本教程由酷世DIY团队维护。**例程资料**：淘宝拍下开发板后联系客服，通过 **百度网盘** 发送。使用问题同样可通过淘宝联系：
+例程与技术支持：淘宝 **酷世DIY** · [Korvo](https://item.taobao.com/item.htm?id=681702043224) · [P4C5](https://item.taobao.com/item.htm?id=667230365314)
 
-- Korvo：[ESP32-S3 Korvo 2 V3](https://item.taobao.com/item.htm?id=681702043224)
-- P4C5：[ESP32P4-C5 4.3寸触摸屏](https://item.taobao.com/item.htm?id=667230365314)
-
-感谢您选择酷世DIY ESP-IDF 开发教程，祝您开发顺利！
+酷世DIY · Kevincoooool

@@ -1,8 +1,8 @@
 # 酷世DIY ESP32S3 Korvo 2 V3 · 例程学习指南
 
-> 例程目录 **`Korvo_Firmware/`** — 淘宝 [拍下 Korvo 板](https://item.taobao.com/item.htm?id=681702043224) 后 **联系客服**，**百度网盘** 发全套资料（不提供公开下载）  
-> 硬件介绍见 [Korvo开发板介绍](./Korvo开发板介绍.md)  
-> 推荐 ESP-IDF **v5.5.x**（已在 5.5.4 下验证部分例程）
+> 例程目录 **`Korvo_Firmware/`** — 淘宝 [拍下 Korvo 板](https://item.taobao.com/item.htm?id=681702043224) 后 **联系客服**，**百度网盘** 发全套资料  
+> **视频系列 K**：[文档总目录与视频教程大纲](./文档总目录与视频教程大纲.md#七系列-k--korvo-实战按学习指南顺序)  
+> 硬件介绍见 [Korvo开发板介绍](./Korvo开发板介绍.md)
 
 ---
 
