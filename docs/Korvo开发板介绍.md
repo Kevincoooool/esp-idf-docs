@@ -1,9 +1,8 @@
 # 酷世DIY ESP32S3 Korvo 2 V3 开发板介绍
 
-> **例程仓库**：[KSDIY_Korvo/Korvo_Firmware](https://github.com/kevincoooool/KSDIY_Korvo)（60+ 分级例程）  
+> **例程资料**：淘宝 [酷世DIY · Korvo](https://item.taobao.com/item.htm?id=681702043224) 拍下后 **联系客服**，通过 **百度网盘** 发送；解压后根目录为 **`Korvo_Firmware/`**（60+ 分级例程）  
 > **学习指南**：[Korvo例程学习指南](./Korvo例程学习指南.md)  
-> **开发流程**：[例程开发流程与公共组件](./例程开发流程与公共组件.md)  
-> **淘宝链接**：[ESP32S3 Korvo 2 V3](https://item.taobao.com/item.htm?id=681702043224)
+> **开发流程**：[例程开发流程与公共组件](./例程开发流程与公共组件.md)
 
 本板硬件与乐鑫官方 **ESP32-S3-Korvo-2 V3** 引脚兼容，可作为平替使用官方大部分例程；酷世 DIY 仓库在此基础上提供统一屏幕 UI、BSP 和更完整的中文学习路线。
 
@@ -12,8 +11,8 @@
 ## 快速上手（5 分钟）
 
 ```powershell
-git clone https://github.com/kevincoooool/KSDIY_Korvo.git
-cd KSDIY_Korvo\Korvo_Firmware\04.advanced.korvo_board_test
+# 从百度网盘下载并解压到不含中文的路径后，例如：
+cd D:\Firmware\Korvo_Firmware\04.advanced.korvo_board_test
 
 idf                          # 导入 ESP-IDF 环境
 idf.py set-target esp32s3    # 首次必须
@@ -143,9 +142,9 @@ idf.py build flash monitor
 <td>TF SD DATA0<br/></td><td>GPIO4<br/></td></tr>
 </table>
 
-## 例程仓库与分级
+## 例程目录与分级
 
-例程源码：[github.com/kevincoooool/KSDIY_Korvo](https://github.com/kevincoooool/KSDIY_Korvo)
+例程源码**不公开下载**。淘宝购买本板后联系客服，客服用 **百度网盘** 发送；解压后根目录为 **`Korvo_Firmware/`**。
 
 ```text
 01.basic.*          GPIO/UART/I2C/ADC/RTOS/NVS…

@@ -48,7 +48,7 @@ nvs, otadata, phy_init, ota_0 (4MB), ota_1 (4MB)
 3. 编译本工程后复制固件：
 
 ```powershell
-cd F:\Github\ESP32P4_KSDIY\P4_C5_4.3_Firmware\02.beginner.ota
+cd P4_C5_4.3_Firmware\02.beginner.ota
 idf.py set-target esp32p4
 idf.py build
 copy build\simple_ota.bin D:\ota_files\simple_ota.bin

@@ -1,8 +1,7 @@
 # 酷世DIY ESP32P4-C5 4.3寸触摸屏开发板 · 硬件介绍
 
-> 例程仓库：[ESP32P4_KSDIY/P4_C5_4.3_Firmware](https://github.com/kevincoooool/ESP32P4_KSDIY)  
-> 学习指南：[P4C5例程学习指南](./P4C5例程学习指南.md)  
-> 淘宝链接：[ESP32P4-C5 开发板](https://item.taobao.com/item.htm)
+> **例程资料**：淘宝 [酷世DIY · P4C5](https://item.taobao.com/item.htm?id=667230365314) 拍下后 **联系客服**，通过 **百度网盘** 发送；解压后根目录 **`P4_C5_4.3_Firmware/`**  
+> 学习指南：[P4C5例程学习指南](./P4C5例程学习指南.md)
 
 ---
 
@@ -135,7 +134,7 @@
 
 | 资料 | 路径/链接 |
 |------|-----------|
-| 例程全集 | GitHub `P4_C5_4.3_Firmware/`（108 个工程） |
+| 例程全集 | 百度网盘资料包内 `P4_C5_4.3_Firmware/`（108 个工程，淘宝客服发放） |
 | 验板首选 | `04.advanced.p4c5_board_test` |
 | 入门指南 | [P4C5例程学习指南](./P4C5例程学习指南.md) |
 | 在线组件 | [P4C5在线组件使用说明](./P4C5在线组件使用说明.md) |
@@ -169,8 +168,8 @@
 ## 八、快速上手
 
 ```powershell
-git clone https://github.com/kevincoooool/ESP32P4_KSDIY.git
-cd ESP32P4_KSDIY\P4_C5_4.3_Firmware\04.advanced.p4c5_board_test
+# 从百度网盘下载并解压到不含中文的路径后，例如：
+cd D:\Firmware\P4_C5_4.3_Firmware\04.advanced.p4c5_board_test
 
 idf                          # 导入 ESP-IDF 5.5.x 环境
 idf.py set-target esp32p4    # 首次必须

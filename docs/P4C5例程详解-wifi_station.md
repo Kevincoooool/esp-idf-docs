@@ -30,7 +30,7 @@ Wi-Fi 是 **事件驱动**，不要在 `app_main` 里 `while` 阻塞等 IP。
 ## 2. 编译烧录
 
 ```powershell
-cd F:\Github\ESP32P4_KSDIY\P4_C5_4.3_Firmware\02.beginner.wifi_station
+cd P4_C5_4.3_Firmware\02.beginner.wifi_station
 idf.py set-target esp32p4
 idf.py menuconfig
 idf.py build flash monitor

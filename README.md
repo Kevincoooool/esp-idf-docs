@@ -23,6 +23,20 @@
 
 **学习顺序**：`通用-搭建编译环境` → 板子 `*学习指南` → `*例程详解-*`；`通用-*` 作 API 查阅。旧版多媒体笔记（如 `通用-avi播放`）文末已链到最新例程详解。
 
+### 如何获取例程资料
+
+本教程文档**免费开放**；**完整例程源码不提供公开下载**（无 GitHub / 公开网盘）。
+
+1. 在淘宝网进入店铺 **「酷世DIY」**，拍下对应开发板  
+2. **下单后联系客服**，说明需要例程资料  
+3. 客服通过 **百度网盘** 私信发送全套例程压缩包  
+4. 下载解压到**不含中文的路径**（如 `D:\Firmware\`），再按文档 `cd` 进工程目录编译烧录  
+
+| 开发板 | 淘宝链接 | 解压后例程根目录 |
+|--------|----------|------------------|
+| ESP32-S3 Korvo 2 V3 | [item.taobao.com/681702043224](https://item.taobao.com/item.htm?id=681702043224) | `Korvo_Firmware/` |
+| ESP32P4-C5 4.3寸触摸屏 | [item.taobao.com/667230365314](https://item.taobao.com/item.htm?id=667230365314) | `P4_C5_4.3_Firmware/` |
+
 ---
 
 ## 开发板快速入口
@@ -33,7 +47,7 @@
 |------|------|
 | [Korvo开发板介绍](./docs/Korvo开发板介绍.md) | 硬件参数、引脚、接口 |
 | [Korvo例程学习指南](./docs/Korvo例程学习指南.md) | **完整学习路线**、30 天计划、FAQ |
-| [例程仓库](https://github.com/kevincoooool/KSDIY_Korvo) | `Korvo_Firmware` 源码 |
+| [淘宝购买 · 联系客服发百度网盘例程](https://item.taobao.com/item.htm?id=681702043224) | 解压得 `Korvo_Firmware/` |
 
 ### ESP32P4-C5 4.3寸触摸屏
 
@@ -42,7 +56,7 @@
 | [ESP32P4-C5开发板介绍](./docs/ESP32P4-C5开发板介绍.md) | 双芯架构、硬件参数 |
 | [P4C5例程学习指南](./docs/P4C5例程学习指南.md) | **完整学习路线**、验板、多媒体 |
 | [P4C5在线组件使用说明](./docs/P4C5在线组件使用说明.md) | 组件注册库引用方法 |
-| [例程仓库](https://github.com/kevincoooool/ESP32P4_KSDIY) | `P4_C5_4.3_Firmware` 源码 |
+| [淘宝购买 · 联系客服发百度网盘例程](https://item.taobao.com/item.htm?id=667230365314) | 解压得 `P4_C5_4.3_Firmware/` |
 
 ### ESP32-S3 SP V4 核心板
 
@@ -161,7 +175,7 @@
 - DVP 摄像头座、TF 卡、双 USB
 - 60+ 分级例程，兼容官方 Korvo 2 V3
 
-### [ESP32P4-C5 4.3寸触摸屏](https://github.com/kevincoooool/ESP32P4_KSDIY)
+### [ESP32P4-C5 4.3寸触摸屏](https://item.taobao.com/item.htm?id=667230365314)
 - ESP32-P4 + ESP32-C5 双芯（Wi-Fi 6 / BLE）
 - 4.3 寸 MIPI DSI 480×800 + ST7123 触摸
 - 16MB Flash + 32MB PSRAM，AXP2101 电源管理
@@ -186,11 +200,9 @@
 
 ## 贡献与反馈
 
-本教程由酷世DIY团队维护。例程问题可在 GitHub 提 Issue：
+本教程由酷世DIY团队维护。**例程资料**：淘宝拍下开发板后联系客服，通过 **百度网盘** 发送。使用问题同样可通过淘宝联系：
 
-- Korvo：[KSDIY_Korvo Issues](https://github.com/kevincoooool/KSDIY_Korvo/issues)
-- P4C5：[ESP32P4_KSDIY Issues](https://github.com/kevincoooool/ESP32P4_KSDIY/issues)
-
-淘宝店铺：酷世DIY
+- Korvo：[ESP32-S3 Korvo 2 V3](https://item.taobao.com/item.htm?id=681702043224)
+- P4C5：[ESP32P4-C5 4.3寸触摸屏](https://item.taobao.com/item.htm?id=667230365314)
 
 感谢您选择酷世DIY ESP-IDF 开发教程，祝您开发顺利！

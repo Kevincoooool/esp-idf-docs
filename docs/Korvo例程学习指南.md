@@ -1,12 +1,19 @@
 # 酷世DIY ESP32S3 Korvo 2 V3 · 例程学习指南
 
-> 本指南对应例程仓库：[KSDIY_Korvo/Korvo_Firmware](https://github.com/kevincoooool/KSDIY_Korvo)  
+> 例程目录 **`Korvo_Firmware/`** — 淘宝 [拍下 Korvo 板](https://item.taobao.com/item.htm?id=681702043224) 后 **联系客服**，**百度网盘** 发全套资料（不提供公开下载）  
 > 硬件介绍见 [Korvo开发板介绍](./Korvo开发板介绍.md)  
 > 推荐 ESP-IDF **v5.5.x**（已在 5.5.4 下验证部分例程）
 
 ---
 
 ## 一、拿到板子后先做什么
+
+### 1.0 获取例程（必读）
+
+1. 淘宝 **酷世DIY** 购买 Korvo 开发板  
+2. **下单后联系客服**，索取例程资料  
+3. 客服通过 **百度网盘** 发送压缩包（含 `Korvo_Firmware/` 及说明）  
+4. 解压到**无中文路径**（如 `D:\Firmware\`）
 
 ### 1.1 开箱检查
 
@@ -15,12 +22,13 @@
 | Korvo 开发板 | 确认屏幕、排针、接口无损伤 |
 | USB Type-C 数据线 × 2 | 左口下载/日志，右口 ESP32-S3 原生 USB |
 | TF 卡（可选） | 多媒体例程需要，格式化为 FAT32 |
+| 例程资料 | 淘宝下单后 **联系客服**，**百度网盘** 发链接 |
 
 ### 1.2 第一次验板（推荐）
 
 ```powershell
-git clone https://github.com/kevincoooool/KSDIY_Korvo.git
-cd KSDIY_Korvo\Korvo_Firmware
+# 百度网盘下载解压后（路径不要含中文）
+cd D:\Firmware\Korvo_Firmware
 
 # 导入 IDF 环境后
 cd 04.advanced.korvo_board_test
