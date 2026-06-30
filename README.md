@@ -21,7 +21,7 @@
 | `P4C5例程详解-` | P4C5 仓库 **可烧录例程** 分步教程 | `P4C5例程详解-ota.md` |
 | `*开发板介绍` / `*学习指南` | 板级说明与学习路线 | `Korvo开发板介绍.md` |
 
-**学习顺序**：`通用-搭建编译环境` → 板子 `*学习指南` → `*例程详解-*`；`通用-*` 作 API 查阅。旧版多媒体笔记（如 `通用-avi播放`）文末已链到最新例程详解。
+**学习顺序**：`通用-搭建编译环境` → **`通用-ESP-IDF框架构成`**（框架全景）→ **`通用-ESP-IDF工程结构`**（单工程文件）→ 板子 `*学习指南` → `*例程详解-*`。
 
 ### 如何获取例程资料
 
@@ -69,6 +69,8 @@
 | 文档 | 说明 |
 |------|------|
 | [例程开发流程与公共组件](./docs/例程开发流程与公共组件.md) | 编译烧录、BSP、Board Manager |
+| [ESP-IDF 框架整体构成](./docs/通用-ESP-IDF框架构成.md) | IDF 安装目录、components、软件分层 |
+| [ESP-IDF 工程结构（对比 Keil）](./docs/通用-ESP-IDF工程结构.md) | 单工程 CMakeLists、sdkconfig 等 |
 | [Korvo与P4C5例程对照表](./docs/Korvo与P4C5例程对照表.md) | 两款板同名例程对照与迁移 |
 | [搭建编译环境](./docs/通用-搭建编译环境.md) | Windows 下 ESP-IDF 安装 |
 
@@ -93,6 +95,8 @@
 
 ### 基础入门
 - [开发环境搭建](./docs/通用-搭建编译环境.md) - Windows 下 ESP-IDF 环境搭建
+- [ESP-IDF 框架整体构成](./docs/通用-ESP-IDF框架构成.md) - IDF 是什么、components、分层、构建流程
+- [ESP-IDF 工程结构（对比 Keil）](./docs/通用-ESP-IDF工程结构.md) - 单个工程里 CMakeLists、sdkconfig 等
 - [例程开发流程与公共组件](./docs/例程开发流程与公共组件.md) - 两款开发板通用开发流程
 - [分区表配置](./docs/通用-partition.md) - Flash 分区表
 - [Kconfig文件介绍](./docs/通用-kconfig.md) - Kconfig 配置系统
