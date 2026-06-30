@@ -1,6 +1,32 @@
-# 一、酷世DIY ESP32S3 Korvo 2 V3板硬件简介
+# 酷世DIY ESP32S3 Korvo 2 V3 开发板介绍
 
-# [一、硬件简介](https://icnynnzcwou8.feishu.cn/wiki/PjxHwvRxOircxUkyRJIcOqQVnQd)
+> **例程仓库**：[KSDIY_Korvo/Korvo_Firmware](https://github.com/kevincoooool/KSDIY_Korvo)（60+ 分级例程）  
+> **学习指南**：[Korvo例程学习指南](./Korvo例程学习指南.md)  
+> **开发流程**：[例程开发流程与公共组件](./例程开发流程与公共组件.md)  
+> **淘宝链接**：[ESP32S3 Korvo 2 V3](https://item.taobao.com/item.htm?id=681702043224)
+
+本板硬件与乐鑫官方 **ESP32-S3-Korvo-2 V3** 引脚兼容，可作为平替使用官方大部分例程；酷世 DIY 仓库在此基础上提供统一屏幕 UI、BSP 和更完整的中文学习路线。
+
+---
+
+## 快速上手（5 分钟）
+
+```powershell
+git clone https://github.com/kevincoooool/KSDIY_Korvo.git
+cd KSDIY_Korvo\Korvo_Firmware\04.advanced.korvo_board_test
+
+idf                          # 导入 ESP-IDF 环境
+idf.py set-target esp32s3    # 首次必须
+idf.py build flash monitor
+```
+
+验板通过后可从 `01.basic.hello_world` 开始系统学习，详见 [Korvo例程学习指南](./Korvo例程学习指南.md)。
+
+**两个 USB 口**：左口（CH9102F）用于下载和日志；右口（ESP32-S3 内置 USB）用于 CDC/MSC/HID/UVC 等 USB 应用。
+
+---
+
+## 一、硬件简介
 
 该开发板几乎包含了 ESP32-S3 的全部可实现功能，把 ESP32-S3 的性能发挥到了极致。它具备了彩屏显示(1.69 寸)、电容触摸、完整的音频输入(2 个麦克风)和输出(喇叭)功能。结合自身 Wi-Fi 和 Bluetooth，还有 AI 图像识别和语音识别功能，就可以做出更多实用和有趣的物联网应用。留出了 IIC 拓展接口，用于连接更多的外部的传感器模块以及执行器。
 
@@ -116,6 +142,21 @@
 <tr>
 <td>TF SD DATA0<br/></td><td>GPIO4<br/></td></tr>
 </table>
+
+## 例程仓库与分级
+
+例程源码：[github.com/kevincoooool/KSDIY_Korvo](https://github.com/kevincoooool/KSDIY_Korvo)
+
+```text
+01.basic.*          GPIO/UART/I2C/ADC/RTOS/NVS…
+02.beginner.*       Wi-Fi/USB/屏幕触摸/SD卡/音频
+03.development.*    LVGL/MP3/USB复合/相册等
+04.advanced.*       摄像头/视觉/AVI/整板测试/Board Manager
+```
+
+公共组件：`ksdiy_example_display`（统一 UI）、`ksdiy_korvo_bsp`（板级 BSP）、`ksdiy_korvo_s3`（Board Manager 板卡描述）。
+
+完整学习路线与 30 天计划见 **[Korvo例程学习指南](./Korvo例程学习指南.md)**。
 
 ## 提供例程以及应用案例
 
